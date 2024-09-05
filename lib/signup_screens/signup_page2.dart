@@ -112,7 +112,7 @@ class _signUpPageTwoState extends State<signUpPageTwo> {
                   ],
                 ),
                 SizedBox(height: 25),
-                
+
                 CustomButton(
                   buttonText: "Sign up",
                   onPressed: () {
@@ -122,6 +122,7 @@ class _signUpPageTwoState extends State<signUpPageTwo> {
                             builder: (context) => numVerifyingPage()));
                   },
                 ),
+
               ],
             ),
           ),
