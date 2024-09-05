@@ -24,7 +24,7 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65, // Increase the height of the TextFormField
+      height: 60, // Increase the height of the TextFormField
       child: TextFormField(
         obscureText: _obscureText,
         decoration: InputDecoration(
@@ -62,7 +62,8 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
           ),
           filled: true,
           fillColor: Color(0xFF1397D5).withOpacity(0.1),
-          contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0), // Adjust padding
+          contentPadding: EdgeInsets.symmetric(
+              horizontal: 16.0, vertical: 20.0), // Adjust padding
         ),
       ),
     );
