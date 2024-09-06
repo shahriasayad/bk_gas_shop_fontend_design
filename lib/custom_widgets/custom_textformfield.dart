@@ -13,6 +13,7 @@ class CustomTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      cursorColor: Color(0xFF1397D5),
       decoration: InputDecoration(
         prefixIcon: Icon(
           icon,
