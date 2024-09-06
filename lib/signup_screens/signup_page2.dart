@@ -2,7 +2,6 @@ import 'package:bk_gas/custom_widgets/custom_button.dart';
 import 'package:bk_gas/custom_widgets/password_text_form_field.dart';
 import 'package:bk_gas/signup_screens/verify_number.dart';
 import 'package:flutter/material.dart';
-import 'package:bk_gas/signup_screens/signup_page1.dart';
 import 'package:bk_gas/custom_widgets/custom_textformfield.dart';
 
 class signUpPageTwo extends StatefulWidget {
@@ -122,7 +121,6 @@ class _signUpPageTwoState extends State<signUpPageTwo> {
                             builder: (context) => numVerifyingPage()));
                   },
                 ),
-
               ],
             ),
           ),
