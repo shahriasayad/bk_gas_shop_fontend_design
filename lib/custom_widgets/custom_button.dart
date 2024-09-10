@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class CustomButton extends StatelessWidget {
+class CustomButton extends StatefulWidget {
   final String buttonText;
   final VoidCallback onPressed; // Add the callback function back
 
@@ -10,6 +10,11 @@ class CustomButton extends StatelessWidget {
     required this.onPressed, // Make sure to include this parameter
   });
 
+  @override
+  State<CustomButton> createState() => _CustomButtonState();
+}
+
+class _CustomButtonState extends State<CustomButton> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,13 +26,12 @@ class CustomButton extends StatelessWidget {
           style: ElevatedButton.styleFrom(
             backgroundColor: Color(0xFF1397D5),
           ),
-          onPressed: onPressed, // Use the callback function directly
+          onPressed: widget.onPressed, // Use the callback function directly
           child: SizedBox(
             height: 25,
-            width: 80,
             child: Center(
               child: Text(
-                buttonText,
+                widget.buttonText,
                 style: TextStyle(
                   fontWeight: FontWeight.w600,
                   fontSize: 18,
