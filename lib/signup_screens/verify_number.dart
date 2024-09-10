@@ -1,4 +1,6 @@
+import 'package:bk_gas/custom_widgets/custom_button.dart';
 import 'package:bk_gas/custom_widgets/custom_textformfield_two.dart';
+import 'package:bk_gas/signup_screens/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class numVerifyingPage extends StatefulWidget {
@@ -22,49 +24,64 @@ class _numVerifyingPageState extends State<numVerifyingPage> {
       body: Material(
         child: Padding(
           padding: const EdgeInsets.all(16.0),
-          child: Column(
-            children: [
-              SizedBox(height: 12),
-              Text(
-                "We have sent a verification code to your number."
-                "Please check your number and enter the code.",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-              SizedBox(height: 18),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  CustomTextFormFieldTwo(),
-                  CustomTextFormFieldTwo(),
-                  CustomTextFormFieldTwo(),
-                  CustomTextFormFieldTwo(),
-                  CustomTextFormFieldTwo(),
-                  CustomTextFormFieldTwo(),
-                ],
-              ),
-              SizedBox(height: 18),
-              Row(
-                mainAxisAlignment: MainAxisAlignment
-                    .spaceBetween, // Space between left and right text
-                children: [
-                  Text(
-                    "Didn’t get the code?",
-                    style: TextStyle(color: Colors.grey, fontSize: 14),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 12),
+                Text(
+                  "We have sent a verification code to your number."
+                  "Please check your number and enter the code.",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w400,
                   ),
-                  Text(
-                    "Resend",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Color(0xFF193664),
-                      fontWeight: FontWeight.bold,
+                ),
+                SizedBox(height: 18),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    CustomTextFormFieldTwo(),
+                    CustomTextFormFieldTwo(),
+                    CustomTextFormFieldTwo(),
+                    CustomTextFormFieldTwo(),
+                    CustomTextFormFieldTwo(),
+                    CustomTextFormFieldTwo(),
+                  ],
+                ),
+                SizedBox(height: 18),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment
+                      .spaceBetween, // Space between left and right text
+                  children: [
+                    Text(
+                      "Didn’t get the code?",
+                      style: TextStyle(color: Colors.grey, fontSize: 14),
                     ),
-                  )
-                ],
-              )
-            ],
+                    Text(
+                      "Resend",
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Color(0xFF193664),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                ),
+                SizedBox(height: 400),
+            
+                CustomButton(
+                  buttonText: "Verify Number",
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProfilePage(),
+                      ),
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
