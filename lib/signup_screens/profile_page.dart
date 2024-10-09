@@ -1,5 +1,10 @@
 import 'package:bk_gas/custom_widgets/GenderDropDownMenu.dart';
+import 'package:bk_gas/custom_widgets/custom_button.dart';
+import 'package:bk_gas/custom_widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
+
+import '../custom_widgets/custom_address_textfield.dart';
+import '../custom_widgets/date_picker.dart';
 
 void main() => runApp(MyApp());
 
@@ -56,7 +61,18 @@ class ProfilePage extends StatelessWidget {
                 "Upload Profile Picture",
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
               ),
+              SizedBox(
+                height: 20,
+              ),
               GenderDropDownMenu(),
+              SizedBox(height: 10),
+              DatePickerField(),
+              SizedBox(height: 10),
+              CustomTextFormField(icon: Icons.email, hintText: "Email"),
+              SizedBox(height: 10),
+              CustomAdressTextfield(hintText: "Address"),
+              SizedBox(height: 30),
+              CustomButton(buttonText: "Continue", onPressed: () {}),
             ],
           ),
         ),
