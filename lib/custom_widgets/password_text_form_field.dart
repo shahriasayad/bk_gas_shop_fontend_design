@@ -37,12 +37,13 @@ class _PasswordTextFormFieldState extends State<PasswordTextFormField> {
             color: Color(0xFF1397D5),
           ),
           suffixIcon: IconButton(
+            onPressed: _toggleVisibility,
             icon: Icon(
-              _obscureText ? Icons.visibility : Icons.visibility_off,
+              _obscureText ? Icons.visibility_off : Icons.visibility,
               color: Color(0xFF1397D5),
             ),
-            onPressed: _toggleVisibility,
           ),
+
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
           ),
